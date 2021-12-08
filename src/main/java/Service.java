@@ -9,7 +9,7 @@ public class Service extends Jooby {
     public static void main(String[] args) { runApp(args, Service::new); }
 
     {
-        get("/", ctx -> "Welcome to our drink ordering system");
+        get("/", ctx -> "Welcome to our drink ordering system - AGEEI");
         get("/orders", ctx -> getAllOrders() );
         get("/orders/{owner}/{recipient}/{drink}", ctx -> {
             Order o = addOrder(ctx.path("owner").value(),
